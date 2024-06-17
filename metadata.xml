@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="ZEB_PP_020_SRV" xml:lang="en" sap:schema-version="1" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityType Name="PPerformance" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Plnkn"/>
+                </Key>
+                <Property Name="Plnkn" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="생산계획번호" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Aurnr" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="생산오더번호" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Planq" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="생산계획 분기" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Fmatnr" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="자재코드" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Maktx" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="자재명" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Werks" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="플랜트번호" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Stlnr" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="BOM번호" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Aufpl" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="공정번호" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Pqsdqty" Type="Edm.Decimal" Nullable="false" Precision="10" Scale="3" sap:unicode="false" sap:label="분기별 판매 계획 수량" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Gmeng" Type="Edm.Decimal" Nullable="false" Precision="10" Scale="3" sap:unicode="false" sap:label="생산계획 수량" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Datuv" Type="Edm.DateTime" Nullable="false" Precision="7" sap:unicode="false" sap:label="생산 시작 일자" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Datub" Type="Edm.DateTime" Nullable="false" Precision="7" sap:unicode="false" sap:label="생산 종료 일자" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Vbeln" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="판매오더번호" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Oadat" Type="Edm.DateTime" Nullable="false" Precision="7" sap:unicode="false" sap:label="생산오더 결재일" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Oares" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="생산오더 결재 담당자" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Osdat" Type="Edm.DateTime" Nullable="false" Precision="7" sap:unicode="false" sap:label="생산오더 상신일" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Osres" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="생산오더 상신 담당자" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Lgort" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="저장위치" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Przint" Type="Edm.Byte" Nullable="false" sap:unicode="false" sap:label="진행률" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Lifnr" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="업체코드" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Prueflos" Type="Edm.Decimal" Nullable="false" Precision="10" Scale="0" sap:unicode="false" sap:unit="Meins" sap:label="검수량" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Abmng" Type="Edm.Decimal" Nullable="false" Precision="10" Scale="0" sap:unicode="false" sap:unit="Meins" sap:label="폐기량" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Abtxt" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="폐기사유" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Pfinqty" Type="Edm.Decimal" Nullable="false" Precision="10" Scale="0" sap:unicode="false" sap:unit="Meins" sap:label="최종 생산량" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Meins" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="단위" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="unit-of-measure"/>
+                <Property Name="Qdatum" Type="Edm.DateTime" Nullable="false" Precision="7" sap:unicode="false" sap:label="검수 일자" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Delflag" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="삭제" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityContainer Name="ZEB_PP_020_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="PPerformanceSet" EntityType="ZEB_PP_020_SRV.PPerformance" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+            </EntityContainer>
+            <atom:link rel="self" href="http://210.16.199.140:8001/sap/opu/odata/sap/ZEB_PP_020_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+            <atom:link rel="latest-version" href="http://210.16.199.140:8001/sap/opu/odata/sap/ZEB_PP_020_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>
